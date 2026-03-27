@@ -18,8 +18,6 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--cream); color: var(--text); line-height: 1.6; }
-
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       background: rgba(13,27,42,0.92); backdrop-filter: blur(12px);
@@ -32,155 +30,60 @@
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a { text-decoration: none; color: rgba(255,255,255,0.6); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: #6ee7b7; }
-    .nav-cta {
-      background: var(--green); color: var(--white); padding: 0.45rem 1.1rem;
-      border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s;
-    }
+    .nav-cta { background: var(--green); color: var(--white); padding: 0.45rem 1.1rem; border-radius: 8px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: background 0.2s; }
     .nav-cta:hover { background: var(--green-light); }
-
-    /* HERO */
     .hero {
       min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 7rem 2rem 5rem;
-      background: var(--hero-bg);
-      position: relative; overflow: hidden;
+      text-align: center; padding: 7rem 2rem 5rem; background: var(--hero-bg); position: relative; overflow: hidden;
     }
-    .hero::before {
-      content: ''; position: absolute; top: -100px; left: -100px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(15,61,46,0.35) 0%, transparent 65%);
-      border-radius: 50%; pointer-events: none;
-    }
-    .hero::after {
-      content: ''; position: absolute; bottom: -120px; right: -120px;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(13,40,70,0.45) 0%, transparent 65%);
-      border-radius: 50%; pointer-events: none;
-    }
-
-    /* Logo card — matches crunchum.nl style */
-    .hero-logo-card {
-      position: relative; z-index: 1;
-      background: rgba(10,20,35,0.7);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 24px; padding: 2rem 2.8rem 1.6rem;
-      margin-bottom: 2.2rem; display: inline-block;
-      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
-    }
+    .hero::before { content: ''; position: absolute; top: -100px; left: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(15,61,46,0.35) 0%, transparent 65%); border-radius: 50%; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -120px; right: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(13,40,70,0.45) 0%, transparent 65%); border-radius: 50%; pointer-events: none; }
+    .hero-logo-card { position: relative; z-index: 1; background: rgba(10,20,35,0.7); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.8rem 1.6rem; margin-bottom: 2.2rem; display: inline-block; box-shadow: 0 8px 40px rgba(0,0,0,0.5); }
     .hero-logo-card img { height: 80px; display: block; margin: 0 auto; }
-    .hero-logo-card .tagline {
-      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em;
-      text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.6rem;
-    }
-
-    .hero-badge {
-      position: relative; z-index: 1;
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(45,106,79,0.3); color: #6ee7b7;
-      border: 1px solid rgba(110,231,183,0.3);
-      padding: 0.35rem 1rem; border-radius: 999px;
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em;
-      margin-bottom: 1.2rem; text-transform: uppercase;
-    }
-    .hero h1 {
-      position: relative; z-index: 1;
-      font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-family: 'Playfair Display', serif;
-      line-height: 1.15; color: var(--white); max-width: 780px; margin-bottom: 1.2rem;
-    }
+    .hero-logo-card .tagline { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.6rem; }
+    .hero-badge { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: 6px; background: rgba(45,106,79,0.3); color: #6ee7b7; border: 1px solid rgba(110,231,183,0.3); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.2rem; text-transform: uppercase; }
+    .hero h1 { position: relative; z-index: 1; font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-family: 'Playfair Display', serif; line-height: 1.15; color: var(--white); max-width: 780px; margin-bottom: 1.2rem; }
     .hero h1 em { color: #6ee7b7; font-style: italic; }
-    .hero p.sub {
-      position: relative; z-index: 1;
-      font-size: 1.1rem; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.75;
-    }
+    .hero p.sub { position: relative; z-index: 1; font-size: 1.1rem; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.75; }
     .hero-btns { position: relative; z-index: 1; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-    .btn-primary {
-      background: var(--green); color: var(--white); padding: 0.85rem 2rem; border-radius: 10px;
-      font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.2s, transform 0.15s;
-    }
+    .btn-primary { background: var(--green); color: var(--white); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background 0.2s, transform 0.15s; }
     .btn-primary:hover { background: var(--green-light); transform: translateY(-1px); }
-    .btn-secondary {
-      background: transparent; color: rgba(255,255,255,0.85); border: 2px solid rgba(255,255,255,0.3);
-      padding: 0.85rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem;
-      text-decoration: none; transition: border-color 0.2s, transform 0.15s;
-    }
+    .btn-secondary { background: transparent; color: rgba(255,255,255,0.85); border: 2px solid rgba(255,255,255,0.3); padding: 0.85rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: border-color 0.2s, transform 0.15s; }
     .btn-secondary:hover { border-color: #6ee7b7; color: #6ee7b7; transform: translateY(-1px); }
-
-    /* Pills */
     .hero-pills { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 3rem; }
-    .pill {
-      display: flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 999px; padding: 0.5rem 1.2rem;
-      font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.8);
-    }
-    .pill span.icon { font-size: 1.1rem; }
-
-    /* SECTIONS */
+    .pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 999px; padding: 0.5rem 1.2rem; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.8); }
     section { padding: 5rem 2rem; }
-    .section-label {
-      display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem;
-    }
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem); font-family: 'Playfair Display', serif;
-      color: var(--dark); line-height: 1.2; margin-bottom: 1rem;
-    }
+    .section-label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-family: 'Playfair Display', serif; color: var(--dark); line-height: 1.2; margin-bottom: 1rem; }
     .section-sub { color: var(--muted); font-size: 1rem; max-width: 540px; line-height: 1.7; }
     .container { max-width: 1100px; margin: 0 auto; }
     .text-center { text-align: center; }
     .text-center .section-sub { margin: 0 auto; }
-
-    /* PRODUCTS */
     .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .product-card {
-      background: var(--white); border-radius: 16px; border: 1px solid var(--border);
-      padding: 2rem; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s;
-    }
+    .product-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); padding: 2rem; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; }
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .product-emoji { font-size: 2.8rem; margin-bottom: 1rem; }
     .product-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem; }
     .product-card p { font-size: 0.92rem; color: #4b5563; line-height: 1.65; margin-bottom: 1.2rem; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.2rem; }
-    .tag {
-      background: var(--green-xlight); color: var(--green); font-size: 0.72rem; font-weight: 600;
-      padding: 0.22rem 0.65rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em;
-    }
-    .nutrition-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem;
-      background: #f9fafb; border-radius: 10px; padding: 0.8rem; margin-bottom: 1rem;
-    }
+    .tag { background: var(--green-xlight); color: var(--green); font-size: 0.72rem; font-weight: 600; padding: 0.22rem 0.65rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .nutrition-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; background: #f9fafb; border-radius: 10px; padding: 0.8rem; margin-bottom: 1rem; }
     .nut-item { text-align: center; }
     .nut-val { font-size: 0.95rem; font-weight: 700; color: var(--dark); }
     .nut-lbl { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
     .ingredient-line { font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 0.75rem; }
-    .coming-badge {
-      display: inline-block; background: var(--accent-light); color: var(--accent);
-      font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem;
-      border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em;
-    }
-
-    /* HORIZON */
+    .coming-badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; }
     .horizon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 2.5rem; }
-    .horizon-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; padding: 1.5rem; text-align: center;
-    }
+    .horizon-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-align: center; }
     .horizon-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
     .horizon-card h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.3rem; }
     .horizon-card p { font-size: 0.85rem; color: var(--muted); }
-
-    /* WHY */
     .why-section { background: linear-gradient(135deg, #f0fdf4 0%, #e8f5e9 100%); }
     .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
-    .why-card {
-      background: var(--white); border-radius: 14px; padding: 1.75rem;
-      border: 1px solid var(--border); box-shadow: var(--shadow);
-    }
+    .why-card { background: var(--white); border-radius: 14px; padding: 1.75rem; border: 1px solid var(--border); box-shadow: var(--shadow); }
     .why-card .icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
     .why-card h4 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.4rem; }
     .why-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.65; }
-
-    /* CONTACT */
     .contact-section { background: var(--dark); color: var(--white); }
     .contact-section .section-label { color: #6ee7b7; }
     .contact-section .section-title { color: var(--white); }
@@ -190,20 +93,12 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
     .form-group label { font-size: 0.82rem; font-weight: 600; color: #d1d5db; }
-    .form-group input, .form-group select, .form-group textarea {
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8px; padding: 0.7rem 1rem; color: var(--white);
-      font-size: 0.92rem; font-family: inherit; outline: none; transition: border-color 0.2s;
-    }
+    .form-group input, .form-group select, .form-group textarea { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 0.7rem 1rem; color: var(--white); font-size: 0.92rem; font-family: inherit; outline: none; transition: border-color 0.2s; }
     .form-group input::placeholder, .form-group textarea::placeholder { color: #6b7280; }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #6ee7b7; }
     .form-group select option { background: var(--dark); }
     .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-submit {
-      background: var(--green); color: var(--white); border: none; padding: 0.9rem 2rem;
-      border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer;
-      transition: background 0.2s; width: 100%; font-family: inherit;
-    }
+    .form-submit { background: var(--green); color: var(--white); border: none; padding: 0.9rem 2rem; border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.2s; width: 100%; font-family: inherit; }
     .form-submit:hover { background: var(--green-light); }
     .contact-info h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--white); }
     .contact-item { display: flex; gap: 0.75rem; margin-bottom: 1.2rem; align-items: flex-start; }
@@ -211,38 +106,20 @@
     .contact-item p { font-size: 0.9rem; color: #9ca3af; line-height: 1.6; }
     .contact-item a { color: #6ee7b7; text-decoration: none; }
     .contact-item a:hover { text-decoration: underline; }
-    .success-msg {
-      display: none; background: rgba(110,231,183,0.1); border: 1px solid #6ee7b7;
-      border-radius: 10px; padding: 1.2rem; text-align: center; color: #6ee7b7; font-weight: 600;
-    }
-
-    /* FOOTER */
+    .success-msg { display: none; background: rgba(110,231,183,0.1); border: 1px solid #6ee7b7; border-radius: 10px; padding: 1.2rem; text-align: center; color: #6ee7b7; font-weight: 600; }
     footer { background: #0d1117; color: #6b7280; text-align: center; padding: 2rem; font-size: 0.83rem; line-height: 1.8; }
     footer a { color: #9ca3af; text-decoration: none; }
     footer a:hover { color: var(--white); }
     .footer-logo { margin-bottom: 0.75rem; }
     .footer-logo img { height: 28px; opacity: 0.7; }
-
-    .disclaimer {
-      font-size: 0.72rem; color: var(--muted); text-align: center;
-      max-width: 700px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-    }
+    .disclaimer { font-size: 0.72rem; color: var(--muted); text-align: center; max-width: 700px; margin: 1.5rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+    @media (max-width: 768px) { .nav-links { display: none; } .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">
-    <img src="https://iili.io/qKcgWcG.png" alt="Crunchum Foods" />
-    <span>Crunchum Foods</span>
-  </a>
+  <a class="nav-logo" href="#"><img src="https://iili.io/qKcgWcG.png" alt="Crunchum Foods" /><span>Crunchum Foods</span></a>
   <ul class="nav-links">
     <li><a href="#products">Products</a></li>
     <li><a href="#why">Why Crunchum</a></li>
@@ -251,7 +128,6 @@
   <a class="nav-cta" href="#contact">Get in Touch</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-logo-card">
     <img src="https://iili.io/qKcgWcG.png" alt="Crunchum Foods" />
@@ -265,15 +141,14 @@
     <a class="btn-secondary" href="#products">Sneak Peek ↓</a>
   </div>
   <div class="hero-pills">
-    <div class="pill"><span class="icon">🌿</span> 100% Natural</div>
-    <div class="pill"><span class="icon">✨</span> Premium Quality</div>
-    <div class="pill"><span class="icon">❄️</span> Freeze Dried</div>
-    <div class="pill"><span class="icon">🚫</span> Zero Junk</div>
-    <div class="pill"><span class="icon">🇮🇳</span> Made in India</div>
+    <div class="pill">🌿 100% Natural</div>
+    <div class="pill">✨ Premium Quality</div>
+    <div class="pill">❄️ Freeze Dried</div>
+    <div class="pill">🚫 Zero Junk</div>
+    <div class="pill">🇮🇳 Made in India</div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="products">
   <div class="container">
     <div class="text-center">
@@ -283,14 +158,12 @@
     </div>
 
     <div class="products-grid">
+
       <div class="product-card">
         <div class="product-emoji">🫐</div>
         <h3>Freeze-Dried Blueberries</h3>
         <p>Intensely flavourful, crisp blueberry bites with all their natural antioxidants and goodness locked in. One ingredient. Pure blueberries — nothing more.</p>
-        <div class="tags">
-          <span class="tag">100% Natural</span><span class="tag">Vegan</span>
-          <span class="tag">Gluten Free</span><span class="tag">High Fibre</span>
-        </div>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">High Fibre</span></div>
         <div class="nutrition-grid">
           <div class="nut-item"><div class="nut-val">357kcal</div><div class="nut-lbl">Energy</div></div>
           <div class="nut-item"><div class="nut-val">79.5g</div><div class="nut-lbl">Carbs</div></div>
@@ -305,10 +178,7 @@
         <div class="product-emoji">🍓</div>
         <h3>Freeze-Dried Strawberries</h3>
         <p>Bright, sweet, and beautifully crisp. Our freeze-dried strawberries deliver the full flavour of summer strawberries, preserved perfectly without a single additive.</p>
-        <div class="tags">
-          <span class="tag">100% Natural</span><span class="tag">Vegan</span>
-          <span class="tag">Gluten Free</span><span class="tag">High Protein</span>
-        </div>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">High Protein</span></div>
         <div class="nutrition-grid">
           <div class="nut-item"><div class="nut-val">325kcal</div><div class="nut-lbl">Energy</div></div>
           <div class="nut-item"><div class="nut-val">72.0g</div><div class="nut-lbl">Carbs</div></div>
@@ -323,10 +193,7 @@
         <div class="product-emoji">🍎</div>
         <h3>Freeze-Dried Apples</h3>
         <p>Light, airy, and naturally sweet apple slices — seeds and core removed, then gently freeze-dried to crisp perfection. A timeless snack, pure and simple.</p>
-        <div class="tags">
-          <span class="tag">100% Natural</span><span class="tag">Vegan</span>
-          <span class="tag">Gluten Free</span><span class="tag">Low Fat</span>
-        </div>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">Low Fat</span></div>
         <div class="nutrition-grid">
           <div class="nut-item"><div class="nut-val">337kcal</div><div class="nut-lbl">Energy</div></div>
           <div class="nut-item"><div class="nut-val">82.0g</div><div class="nut-lbl">Carbs</div></div>
@@ -341,10 +208,7 @@
         <div class="product-emoji">🍌</div>
         <h3>Freeze-Dried Bananas</h3>
         <p>Naturally sweet and wonderfully crunchy, our freeze-dried bananas pack all the goodness of fresh bananas into a light, crispy bite — perfect as a snack or topping.</p>
-        <div class="tags">
-          <span class="tag">100% Natural</span><span class="tag">Vegan</span>
-          <span class="tag">Gluten Free</span><span class="tag">High Energy</span>
-        </div>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">High Energy</span></div>
         <div class="nutrition-grid">
           <div class="nut-item"><div class="nut-val">346kcal</div><div class="nut-lbl">Energy</div></div>
           <div class="nut-item"><div class="nut-val">88.3g</div><div class="nut-lbl">Carbs</div></div>
@@ -356,13 +220,25 @@
       </div>
 
       <div class="product-card">
+        <div class="product-emoji">🍍</div>
+        <h3>Freeze-Dried Pineapple</h3>
+        <p>Bright, tangy, and irresistibly crisp. Our freeze-dried pineapple captures the full tropical punch of fresh pineapple — no added sugar, just pure sunshine in every bite.</p>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">Rich in Vitamin C</span></div>
+        <div class="nutrition-grid">
+          <div class="nut-item"><div class="nut-val">344kcal</div><div class="nut-lbl">Energy</div></div>
+          <div class="nut-item"><div class="nut-val">87.5g</div><div class="nut-lbl">Carbs</div></div>
+          <div class="nut-item"><div class="nut-val">3.6g</div><div class="nut-lbl">Protein</div></div>
+          <div class="nut-item"><div class="nut-val">8.9g</div><div class="nut-lbl">Fibre</div></div>
+        </div>
+        <p class="ingredient-line">Ingredient: Pineapple 100% · No preservatives · No added sugar · Allergen free</p>
+        <br><span class="coming-badge">Coming Soon</span>
+      </div>
+
+      <div class="product-card">
         <div class="product-emoji">🥭</div>
         <h3>Freeze-Dried Mangoes</h3>
         <p>The rich, tropical sweetness of Indian mangoes — freeze-dried to perfection. Intensely flavourful, melt-in-your-mouth pieces with every nutrient locked in.</p>
-        <div class="tags">
-          <span class="tag">100% Natural</span><span class="tag">Vegan</span>
-          <span class="tag">Gluten Free</span><span class="tag">Rich in Vitamin C</span>
-        </div>
+        <div class="tags"><span class="tag">100% Natural</span><span class="tag">Vegan</span><span class="tag">Gluten Free</span><span class="tag">Rich in Vitamin C</span></div>
         <div class="nutrition-grid">
           <div class="nut-item"><div class="nut-val">319kcal</div><div class="nut-lbl">Energy</div></div>
           <div class="nut-item"><div class="nut-val">78.8g</div><div class="nut-lbl">Carbs</div></div>
@@ -372,6 +248,7 @@
         <p class="ingredient-line">Ingredient: Mangoes 100% · No preservatives · No added sugar · Allergen free</p>
         <br><span class="coming-badge">Coming Soon</span>
       </div>
+
     </div>
 
     <p class="disclaimer">* Nutritional values sourced from USDA FoodData Central. Indicative values pending authorised laboratory analysis.</p>
@@ -382,22 +259,13 @@
         <h2 class="section-title">What's Coming Next</h2>
       </div>
       <div class="horizon-grid">
-        <div class="horizon-card">
-          <div class="icon">🥦</div>
-          <h4>Freeze-Dried Vegetables</h4>
-          <p>Crisp, colourful, and packed with vitamins. Picked at peak freshness and locked in at their best.</p>
-        </div>
-        <div class="horizon-card">
-          <div class="icon">🥗</div>
-          <h4>Premium Snack Mixes</h4>
-          <p>Thoughtfully crafted blends of freeze-dried fruits — perfect for on-the-go, guilt-free indulgence.</p>
-        </div>
+        <div class="horizon-card"><div class="icon">🥦</div><h4>Freeze-Dried Vegetables</h4><p>Crisp, colourful, and packed with vitamins. Picked at peak freshness and locked in at their best.</p></div>
+        <div class="horizon-card"><div class="icon">🥗</div><h4>Premium Snack Mixes</h4><p>Thoughtfully crafted blends of freeze-dried fruits — perfect for on-the-go, guilt-free indulgence.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY -->
 <section id="why" class="why-section">
   <div class="container">
     <div class="text-center">
@@ -406,41 +274,16 @@
       <p class="section-sub">We built Crunchum because real food shouldn't have a long ingredients list you can't pronounce.</p>
     </div>
     <div class="why-grid">
-      <div class="why-card">
-        <div class="icon">🔬</div>
-        <h4>Science of Freshness</h4>
-        <p>Freeze drying removes moisture without heat, preserving up to 97% of nutrients and the full natural flavour.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">🌍</div>
-        <h4>Responsibly Sourced</h4>
-        <p>We partner with trusted suppliers who share our commitment to quality, sustainability, and honest food production.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">🏆</div>
-        <h4>Premium Quality</h4>
-        <p>Every batch is carefully handled, tested, and packaged to meet the highest food safety standards.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">💚</div>
-        <h4>Clean Label Always</h4>
-        <p>If you can't read the ingredient, it shouldn't be in your food. Simple as nature intended — nothing more.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">🇮🇳</div>
-        <h4>Made in India</h4>
-        <p>Proudly Indian, sourcing the finest domestic produce and bringing it to markets worldwide.</p>
-      </div>
-      <div class="why-card">
-        <div class="icon">🤝</div>
-        <h4>Trade &amp; Export</h4>
-        <p>Interested in stocking or distributing Crunchum products? We welcome trade and export enquiries.</p>
-      </div>
+      <div class="why-card"><div class="icon">🔬</div><h4>Science of Freshness</h4><p>Freeze drying removes moisture without heat, preserving up to 97% of nutrients and the full natural flavour.</p></div>
+      <div class="why-card"><div class="icon">🌍</div><h4>Responsibly Sourced</h4><p>We partner with trusted suppliers who share our commitment to quality, sustainability, and honest food production.</p></div>
+      <div class="why-card"><div class="icon">🏆</div><h4>Premium Quality</h4><p>Every batch is carefully handled, tested, and packaged to meet the highest food safety standards.</p></div>
+      <div class="why-card"><div class="icon">💚</div><h4>Clean Label Always</h4><p>If you can't read the ingredient, it shouldn't be in your food. Simple as nature intended — nothing more.</p></div>
+      <div class="why-card"><div class="icon">🇮🇳</div><h4>Made in India</h4><p>Proudly Indian, sourcing the finest domestic produce and bringing it to markets worldwide.</p></div>
+      <div class="why-card"><div class="icon">🤝</div><h4>Trade &amp; Export</h4><p>Interested in stocking or distributing Crunchum products? We welcome trade and export enquiries.</p></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="text-center">
@@ -448,27 +291,15 @@
       <h2 class="section-title">Contact Us</h2>
       <p class="section-sub" style="color:#9ca3af;">Leave your details and be the first to hear when Crunchum launches — plus exclusive early-access offers.</p>
     </div>
-
     <div class="contact-grid">
       <div>
-        <div id="formSuccess" class="success-msg">
-          🎉 Thank you! We'll be in touch at <strong>info@crunchum.in</strong> soon.
-        </div>
+        <div id="formSuccess" class="success-msg">🎉 Thank you! We'll be in touch at <strong>info@crunchum.in</strong> soon.</div>
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/mreoezpv" method="POST">
           <div class="form-row">
-            <div class="form-group">
-              <label>First Name</label>
-              <input type="text" name="first_name" placeholder="Ravi" required />
-            </div>
-            <div class="form-group">
-              <label>Last Name</label>
-              <input type="text" name="last_name" placeholder="Sharma" required />
-            </div>
+            <div class="form-group"><label>First Name</label><input type="text" name="first_name" placeholder="Ravi" required /></div>
+            <div class="form-group"><label>Last Name</label><input type="text" name="last_name" placeholder="Sharma" required /></div>
           </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="you@example.com" required />
-          </div>
+          <div class="form-group"><label>Email Address</label><input type="email" name="email" placeholder="you@example.com" required /></div>
           <div class="form-group">
             <label>I'm Interested In</label>
             <select name="interest" required>
@@ -479,53 +310,34 @@
               <option>Freeze-Dried Bananas</option>
               <option>Freeze-Dried Pineapple</option>
               <option>Freeze-Dried Mangoes</option>
-              <option>Freeze-Dried Pineapple</option>
               <option>All Current Products</option>
               <option>Future Products (Vegetables, Snack Mixes)</option>
               <option>Trade / Export Enquiry</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Message (Optional)</label>
-            <textarea name="message" placeholder="Tell us about your interest…"></textarea>
-          </div>
+          <div class="form-group"><label>Message (Optional)</label><textarea name="message" placeholder="Tell us about your interest…"></textarea></div>
           <button type="submit" class="form-submit">Send Message →</button>
         </form>
       </div>
-
       <div class="contact-info">
         <h3>Get in Touch</h3>
-        <div class="contact-item">
-          <span class="icon">📧</span>
-          <p>Email us at<br /><a href="mailto:info@crunchum.in">info@crunchum.in</a></p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">🏢</span>
-          <p>Crunchum Foods India Private Limited<br />Sagar, Madhya Pradesh, India</p>
-        </div>
-        <div class="contact-item">
-          <span class="icon">⏰</span>
-          <p>We aim to respond within 2 business days.</p>
-        </div>
+        <div class="contact-item"><span class="icon">📧</span><p>Email us at<br /><a href="mailto:info@crunchum.in">info@crunchum.in</a></p></div>
+        <div class="contact-item"><span class="icon">🏢</span><p>Crunchum Foods India Private Limited<br />Sagar, Madhya Pradesh, India</p></div>
+        <div class="contact-item"><span class="icon">⏰</span><p>We aim to respond within 2 business days.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <img src="https://iili.io/qKcgWcG.png" alt="Crunchum Foods" />
-  </div>
-  <p>✦ No Preservatives. No Compromise. ✦</p>
-  <br />
+  <div class="footer-logo"><img src="https://iili.io/qKcgWcG.png" alt="Crunchum Foods" /></div>
+  <p>✦ No Preservatives. No Compromise. ✦</p><br />
   <p>
     <a href="#products">Products</a> &nbsp;·&nbsp;
     <a href="#why">Why Crunchum</a> &nbsp;·&nbsp;
     <a href="#contact">Contact</a> &nbsp;·&nbsp;
     <a href="mailto:info@crunchum.in">info@crunchum.in</a>
-  </p>
-  <br />
+  </p><br />
   <p>Launching Soon &nbsp;·&nbsp; © 2026 Crunchum Foods India Private Limited &nbsp;·&nbsp; CIN: U10300MP2026PTC082523 &nbsp;·&nbsp; Sagar, Madhya Pradesh, India</p>
 </footer>
 
