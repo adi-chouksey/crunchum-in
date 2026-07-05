@@ -135,7 +135,9 @@ nav.scrolled { background: rgba(251,250,247,0.9); backdrop-filter: blur(16px); b
 .card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s; display: flex; flex-direction: column; }
 .card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -22px rgba(45,30,15,0.22); border-color: transparent; }
-.card-banner { height: 300px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.card-banner { height: 300px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;
+  background: var(--white);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--c, var(--mango)) 10%, #fff), color-mix(in srgb, var(--c, var(--mango)) 4%, #fff)); }
 .card-banner::before { content:''; position:absolute; width: 220px; height: 220px; border-radius: 50%; filter: blur(46px);
   background: var(--c, var(--mango)); opacity: 0.16; transition: opacity 0.4s, transform 0.5s; }
 .card:hover .card-banner::before { opacity: 0.3; transform: scale(1.15); }
@@ -255,7 +257,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 64px cla
   <div class="hero-stage">
     <div class="pack side-l"><img src="Strawberry.png" alt="Freeze-dried strawberry pouch" /></div>
     <div class="pack lead"><img src="Mango_Slices.png" alt="Freeze-dried mango slices pouch" /></div>
-    <div class="pack side-r"><img src="Blueberry.png" alt="Freeze-dried blueberry pouch" /></div>
+    <div class="pack side-r"><img src="Blueberry.png?v=2" alt="Freeze-dried blueberry pouch" /></div>
   </div>
 </header>
 
@@ -309,7 +311,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 64px cla
     </article>
 
     <article class="card reveal" style="--c: var(--blueberry)">
-      <div class="card-banner"><img src="Blueberry.png" alt="Freeze-dried blueberry" /></div>
+      <div class="card-banner"><img src="Blueberry.png?v=2" alt="Freeze-dried blueberry" /></div>
       <div class="card-body">
         <h3 class="card-name"><span class="dot"></span>Blueberry</h3>
         <p class="card-desc">Premium European blueberries, freeze-dried in India. Tiny, deep, and full of antioxidants.</p>
@@ -327,7 +329,7 @@ footer { background: var(--ink); color: rgba(255,255,255,0.7); padding: 64px cla
     </article>
 
     <article class="card reveal" style="--c: var(--jamun)">
-      <div class="card-banner"><img src="jamun.png" alt="Freeze-dried jamun cubes" /></div>
+      <div class="card-banner"><img src="jamun.png?v=2" alt="Freeze-dried jamun cubes" /></div>
       <div class="card-body">
         <h3 class="card-name"><span class="dot"></span>Jamun Cubes</h3>
         <p class="card-desc">Deep purple, wine-dark and tangy. A true Indian original, rarely found as a snack.</p>
